@@ -2,6 +2,19 @@
 
 20 buckets. Only content-bearing ones listed. Counts capped at API page size.
 
+
+## Tier 0 — the canon (added 2026-09-10)
+
+| Location | Contents | Agentic use |
+|---|---|---|
+| `essayviz-videos/ochema-assets/TantraSara-HemendraNathChakravartyEd.-BorisMarjanovick.pdf` | **full Tantrasara** (Chakravarty ed.) | essence-text ledger, next dossier after Proclus |
+| `patala/public/published/ipvv/` | **full IPVV tree**: `index.json`, `essay-cl3.md`, `goldchain-cl3.json`, `adjudication-cl3.json`, `clusters.*`, passage chunks (A–D) | recognition debate engine: claims + adjudication pattern to copy |
+| `patala/artifacts/translations/` | `tantraloka.jsonl` (6,903), `malinivijayottara.jsonl`, `spandakarika.jsonl`, `spandapradipika.jsonl` | verse ledgers ×4 works |
+| `essayviz-videos/spanda-pipeline-test/` | `scene-pack.json` + film + contact | worked scene-pack example |
+| `factory-assets/media/spanda-karika-dossier.md` | Spanda dossier (sibling of Proclus dossier format) | second dossier template |
+| `longform-audio/bettina-baumer-pratyabhijna-hrdayam/` | 11 sessions MP3 + `.vtt` transcripts | Heart-of-Recognition audio corpus, transcribed |
+| `essayaudio/` (69 keys) | essay TTS: `abhinava infotheory/liberaki`, `procluselements`, `iamblichustheurgy`, `tantralokan2`, `rasa abhinava`, `recognition*`, `idealismshaivism`, `it from bit from siva`… | topic audio index |
+
 ## Tier 1 — direct fuel
 
 | Bucket | Contents | Agentic use |
