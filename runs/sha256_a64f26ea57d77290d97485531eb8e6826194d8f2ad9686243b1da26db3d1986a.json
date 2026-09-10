@@ -1,0 +1,57 @@
+{
+ "content": {
+  "handler": "analyze",
+  "out": {
+   "amend_candidates": [
+    "seed1",
+    "seed2",
+    "seed4",
+    "seed6-ham"
+   ],
+   "file": "/home/ubuntu/seed0/tournament_1789040402.jsonl",
+   "note": "rank tracks evidence-file count among green seeds; amending ev-0 seeds with evidence notes falsifies whether count (vs content) moves rank",
+   "table": [
+    {
+     "compliant": true,
+     "evidence": 4,
+     "seed": "seed3",
+     "tests": true
+    },
+    {
+     "compliant": true,
+     "evidence": 2,
+     "seed": "seed5",
+     "tests": true
+    },
+    {
+     "compliant": true,
+     "evidence": 0,
+     "seed": "seed1",
+     "tests": true
+    },
+    {
+     "compliant": true,
+     "evidence": 0,
+     "seed": "seed2",
+     "tests": true
+    },
+    {
+     "compliant": true,
+     "evidence": 0,
+     "seed": "seed4",
+     "tests": true
+    },
+    {
+     "compliant": true,
+     "evidence": 0,
+     "seed": "seed6-ham",
+     "tests": true
+    }
+   ]
+  },
+  "task": "A45"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:a64f26ea57d77290d97485531eb8e6826194d8f2ad9686243b1da26db3d1986a",
+ "ts": 1789042085.2561362
+}

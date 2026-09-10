@@ -1,0 +1,19 @@
+{
+ "content": {
+  "handler": "amend_seeds",
+  "out": {
+   "bump": "1.1",
+   "bumped": [
+    "seed1",
+    "seed2",
+    "seed4",
+    "seed6-ham"
+   ],
+   "justification": "ev-0 green seeds trail on evidence count; adding evidence notes tests if count moves rank (falsifier: rank unchanged)"
+  },
+  "task": "A46"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:c34d731247fa2b0d2d37d1776237d667779912b6bebf4cb853d1a4f8e577756a",
+ "ts": 1789042085.613395
+}

@@ -1,0 +1,28 @@
+{
+ "content": {
+  "handler": "report",
+  "out": {
+   "done": 37,
+   "flags": [
+    "A43: done without a-log record",
+    "A-auto-verify-41678: done without a-log record",
+    "A45: done without a-log record",
+    "A46: done without a-log record",
+    "A47: done without a-log record",
+    "duplicate task ids in A-QUEUE",
+    "5 a-log records reference unknown tasks"
+   ],
+   "matched": 32,
+   "open": [
+    "A48"
+   ],
+   "receipt_files": 41,
+   "report": "/home/ubuntu/proclusagent/docs/A-REPORT.md",
+   "stop": false
+  },
+  "task": "A48"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:dffaadc56cf14cfdfdc3186e38bb0cb9ed35e4beb74b77ffb3dc4e0bd2c0a969",
+ "ts": 1789042088.411996
+}

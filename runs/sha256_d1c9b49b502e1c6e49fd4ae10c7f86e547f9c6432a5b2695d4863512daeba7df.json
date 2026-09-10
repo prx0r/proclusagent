@@ -1,0 +1,12 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": []
+  },
+  "task": "A26"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:d1c9b49b502e1c6e49fd4ae10c7f86e547f9c6432a5b2695d4863512daeba7df",
+ "ts": 1789037699.0780382
+}

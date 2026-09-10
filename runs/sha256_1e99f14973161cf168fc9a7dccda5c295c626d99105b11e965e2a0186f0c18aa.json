@@ -1,0 +1,14 @@
+{
+ "content": {
+  "handler": "verify",
+  "out": {
+   "bad": [],
+   "ok": true,
+   "packets": 57
+  },
+  "task": "A-auto-verify-37699"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:1e99f14973161cf168fc9a7dccda5c295c626d99105b11e965e2a0186f0c18aa",
+ "ts": 1789037699.1267242
+}

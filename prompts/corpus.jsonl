@@ -1,0 +1,21 @@
+{"id": "p01", "source": "chat", "text": "a-tasks.com"}
+{"id": "p02", "source": "chat", "text": "a-loop.com"}
+{"id": "p03", "source": "chat", "text": "greatcontinue.com"}
+{"id": "p04", "source": "chat", "text": "hamharness.com"}
+{"id": "p05", "source": "chat", "text": "do it ensure you are recording all progress to a-logs"}
+{"id": "p06", "source": "chat", "text": "ok run all a-tasks and log it all then review and suggest next a-tasks with justification and how you validate and supply the evidence for them"}
+{"id": "p07", "source": "chat", "text": "ok document all progress and zoom out what have we actually achieved so far what are we missing"}
+{"id": "p08", "source": "chat", "text": "ok now make all of it accessible via mcp so u can test all the site features headlessly"}
+{"id": "p09", "source": "chat", "text": "ok ensure entire repo is organised and there explanations and documentation and recipes and agents.md review /cg for how to do this and ensure no confusion on exactly whats going on when a new agent enters here do full audit"}
+{"id": "p10", "source": "chat", "text": "great ok should be obvious what i want from u here. review all cmail and adjacent repos until its obvious then tell me what u think it is"}
+{"id": "p11", "source": "chat", "text": "ok make the repo beautiful create mini stale folders in all the folders so anything stale u add there give it a long title that says exactly the alpha thats in the repo work autonomously doing this for the entire repo dont rewrite or break anything"}
+{"id": "p12", "source": "chat", "text": "save this as explicit goal for now and this is your only target: an agent can quickly see if it can use a domain name and insta name and x name etc, then autonomously purchase on cloudflare, then sign it up to email, then use that email to sign up for each account, then create a phone number using telnyx which it can then autonomously receive the sign up message from and enter it. break it into steps e.g. checkpoint 1 can we get evidence of if a domain is valid, available on each social site. create the checkpoints for our vision and then work autonomously on it"}
+{"id": "p13", "source": "chat", "text": "ok now review all threads is it stale? what shall we do next"}
+{"id": "p14", "source": "chat", "text": "set this exact message as northstar and then from it create a git tree branch split into subtasks with binary validation which you must supply evidence that passes a validator py script in order to pass it and then create all the steps to guarantee this goal. then work autonomously until its done using ralph loops"}
+{"id": "p15", "source": "chat", "text": "a-tasks and h-tasks and m-tasks each become global registry that agent appends tasks to and then the only way to remove a-tasks is to remove the validation criteria it set when creating. m-task obviously is locked and h-task could be some parallel stream. the agent autonomously does a-tasks, human can take its time doing h-tasks and then supply the information in a browser interface which the agent polls every so often. maintain graph of what that h-task unlocks, money tasks lay out exactly why its spending the money what limitations are in place, then human presses button and only that amount can come out of the wallet"}
+{"id": "p16", "source": "chat", "text": "review all you done and test it all. run it as tournaments. encode all the a-task logic, the registry for agent tasks, how to work autonomously, also a-logs for recording all the actions taken. figure out how to test all of it scientifically for what works. use cg type logic to craft hypothesis, look for falsifiable evidence. this becomes your own hypothesis for running each seed and encode falsification criteria as part of criteria files. document all this process on how to run a tournament with the exact schemas and why you are doing it then run it all and log all process notes"}
+{"id": "w01", "source": "wal", "text": "how is a jsonl 1 gb whats in it?"}
+{"id": "w02", "source": "wal", "text": "DB uploaded (5.7G). Now the rest:"}
+{"id": "w03", "source": "wal", "text": "Build Next.js ereader with Pure/Scholarly/Explained modes"}
+{"id": "w04", "source": "wal", "text": "Upload cleaned texts + site to Cloudflare Pages/R2"}
+{"id": "w05", "source": "wal", "text": "Deploy to tantrafiles.xyz"}

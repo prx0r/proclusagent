@@ -1,0 +1,18 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/mwgym",
+    "prx0r/agentic-infra",
+    "prx0r/venture-lab",
+    "prx0r/venturelab",
+    "prx0r/agentseo"
+   ]
+  },
+  "task": "A-auto-boot-49-25"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:0f817e681da46465f9d0e4834a6252774089157d994eb1c343d454309efd2b13",
+ "ts": 1789035620.405282
+}

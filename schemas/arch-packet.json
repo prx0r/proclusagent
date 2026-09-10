@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ArchPacket",
+  "description": "One architecture pattern retained from one prx0r repo. Ledger: OPEN -> claimed -> verified. Provenance pinned, AGPL patterns-only.",
+  "type": "object",
+  "required": ["packet", "source_repo", "commit_sha", "license", "family", "pattern", "run_shape", "evidence", "truth_condition", "status"],
+  "properties": {
+    "packet": {"type": "string", "description": "e.g. arch/cg--deterministic-evolution-kernel"},
+    "source_repo": {"type": "string", "description": "e.g. prx0r/cg"},
+    "commit_sha": {"type": "string", "description": "pinned SHA, provenance or it didn't happen"},
+    "license": {"type": "string"},
+    "family": {"enum": ["evolution-kernel", "factory", "oracle", "kgraph", "comms", "protocol", "render", "infra", "stub"]},
+    "pattern": {"type": "string", "description": "one-paragraph mechanism, structural not flattened"},
+    "run_shape": {
+      "type": "object",
+      "properties": {
+        "bring_up": {"type": "array", "items": {"type": "string"}},
+        "gate": {"type": "array", "items": {"string": "string"}, "items": {"type": "string"}},
+        "tests_present": {"type": "boolean"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "root_tree": {"type": "array", "items": {"type": "string"}},
+        "readme_excerpt": {"type": "string"},
+        "seed0_check": {"type": "string"},
+        "receipt_id": {"type": "string"}
+      }
+    },
+    "truth_condition": {"type": "string", "description": "What would falsify that this pattern works"},
+    "rival_reading": {"type": "string", "description": "Strongest non-agentic alternative, steelmanned"},
+    "seed0_notes": {"type": "string", "description": "compliant? substrate? tournament-runnable?"},
+    "status": {"enum": ["claimed", "verified", "disputed"]},
+    "verifier": {"type": "string"},
+    "ts": {"type": "string", "format": "date-time"}
+  }
+}

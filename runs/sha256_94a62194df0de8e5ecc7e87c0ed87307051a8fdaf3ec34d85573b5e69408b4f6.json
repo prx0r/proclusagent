@@ -1,0 +1,18 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/MinimaMCP",
+    "prx0r/x402",
+    "prx0r/x4022",
+    "prx0r/x402fun",
+    "prx0r/Ochema"
+   ]
+  },
+  "task": "A-auto-boot-57-8"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:94a62194df0de8e5ecc7e87c0ed87307051a8fdaf3ec34d85573b5e69408b4f6",
+ "ts": 1789037645.6324625
+}

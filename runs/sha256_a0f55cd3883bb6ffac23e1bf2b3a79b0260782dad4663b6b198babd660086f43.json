@@ -1,0 +1,24 @@
+{
+ "content": {
+  "handler": "mcp_selfcheck",
+  "out": {
+   "ladders": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7"
+   ],
+   "mcp_search_hits": 3,
+   "ok": true,
+   "packet": "prx0r/cg"
+  },
+  "task": "A33"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:a0f55cd3883bb6ffac23e1bf2b3a79b0260782dad4663b6b198babd660086f43",
+ "ts": 1789038320.6843414
+}

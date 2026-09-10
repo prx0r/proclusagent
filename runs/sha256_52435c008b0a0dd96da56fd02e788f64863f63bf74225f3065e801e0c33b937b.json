@@ -1,0 +1,16 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/ochema-film-library",
+    "prx0r/ochema-site",
+    "prx0r/ochema2"
+   ]
+  },
+  "task": "A-auto-boot-57-3"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:52435c008b0a0dd96da56fd02e788f64863f63bf74225f3065e801e0c33b937b",
+ "ts": 1789037645.6703563
+}

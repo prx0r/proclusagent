@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "funnel": "binary_pass true",
+   "pytest": "see above",
+   "tournament": "seed6-ham 5/5 + 10 green #6",
+   "validator": "6/6 exit 0"
+  },
+  "task": "HAM-TOURNAMENT"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:ed5319a8cb55f02f2c23c79ed3236126c0f5659676c7d264869dc6b0742e45d7",
+ "ts": 1789040459.6137528
+}

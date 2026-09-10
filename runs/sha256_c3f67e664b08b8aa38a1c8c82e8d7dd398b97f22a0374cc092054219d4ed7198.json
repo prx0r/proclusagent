@@ -1,0 +1,16 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/StallSpy",
+    "prx0r/cmail",
+    "prx0r/cogym"
+   ]
+  },
+  "task": "A10"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:c3f67e664b08b8aa38a1c8c82e8d7dd398b97f22a0374cc092054219d4ed7198",
+ "ts": 1789035600.1694288
+}

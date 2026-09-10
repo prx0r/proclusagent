@@ -1,0 +1,13 @@
+{
+ "content": {
+  "handler": "index",
+  "out": {
+   "digest": "8e339820821e31e9",
+   "packets": 49
+  },
+  "task": "A10b"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:c8df0e8e55ac6024c5d107fd4fc9b2d7acf75ca07ec75d4404f32e5c524acd40",
+ "ts": 1789035602.173521
+}

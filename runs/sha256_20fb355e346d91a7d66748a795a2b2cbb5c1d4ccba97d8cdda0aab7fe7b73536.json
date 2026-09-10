@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "battery": "all-green",
+   "cycles": 3,
+   "handler": "full_test",
+   "queues": "34/0/6/5"
+  },
+  "task": "LOOP-STEADY"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:20fb355e346d91a7d66748a795a2b2cbb5c1d4ccba97d8cdda0aab7fe7b73536",
+ "ts": 1789041707.4224591
+}

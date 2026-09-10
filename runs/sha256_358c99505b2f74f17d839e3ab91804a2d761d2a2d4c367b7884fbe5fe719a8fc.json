@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "loo_hit": "0.0 all-alpha (n=2, forced)",
+   "pilot_tests": "4 passed",
+   "real_sends": 2,
+   "verdict": "retrieval+interp now; LoRA gated"
+  },
+  "task": "STACK-PILOT"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:358c99505b2f74f17d839e3ab91804a2d761d2a2d4c367b7884fbe5fe719a8fc",
+ "ts": 1789039905.5740407
+}

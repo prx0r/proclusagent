@@ -1,0 +1,19 @@
+{
+ "content": {
+  "handler": "funnel_collect",
+  "out": {
+   "idea": "K2 checkpoint: claim text plus sha256 manifest plus audit line; re-verify from m",
+   "mode": "collect-only true",
+   "rc": 0,
+   "seeds": [
+    "seed1",
+    "seed2",
+    "seed3"
+   ]
+  },
+  "task": "A28"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:c74a85e8f0cd6983b713cc6f9b80c409e8a2ccd73251c7a909d00e56c845c519",
+ "ts": 1789037699.0889797
+}

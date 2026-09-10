@@ -1,0 +1,30 @@
+{
+ "content": {
+  "handler": "tournament_full",
+  "out": {
+   "after": [
+    "seed3",
+    "seed5",
+    "seed1",
+    "seed2",
+    "seed4",
+    "seed6-ham"
+   ],
+   "before": [
+    "seed3",
+    "seed5",
+    "seed1",
+    "seed2",
+    "seed4",
+    "seed6-ham"
+   ],
+   "moved": false,
+   "rc": 0,
+   "tail": "#1 seed3 tests_green=True compliant=True (5/5) evidence=4 :: 4 passed in 0.02s\n#2 seed5 tests_green=True compliant=True (5/5) evidence=2 :: 3 passed in 0.01s\n#3 seed1 tests_green=True compliant=True (5/5) evidence=0 :: 4 passed in 0.39s\n#4 seed2 tests_green=True compliant=True (5/5) evidence=0 :: 4 passed in 0.02s\n#5 seed4 tests_green=True compliant=True (5/5) evidence=0 :: 3 passed in 0.01s\n#6 seed6-ham tests_green=True compliant=True (5/5) evidence=0 :: 10 passed in 0.05s\nreceipt: runs/sha256_7cfe3e0841c4d348617a395bccb2218f0c9c867c979e5310cb354a49f6cea026.json\n"
+  },
+  "task": "A47"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:eed48569387be1d76f1100dbd8d982dc7db41d8e78790b835282938b3b840b74",
+ "ts": 1789042088.4071507
+}

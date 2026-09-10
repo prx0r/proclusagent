@@ -1,0 +1,22 @@
+{
+ "content": {
+  "handler": "t2_sweep",
+  "out": {
+   "count": 8,
+   "extracted": [
+    "prx0r/qdw-forge",
+    "prx0r/cge1",
+    "prx0r/fleet-artifacts",
+    "prx0r/MinimaMCP",
+    "prx0r/evolabz",
+    "prx0r/Alethiea",
+    "prx0r/Aletheia",
+    "prx0r/Iolaus"
+   ]
+  },
+  "task": "A13"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:0dd5eae472b0adb18bc3ad515c87db326f3a43455fadeb5bd4099cd9f2c0374e",
+ "ts": 1789036329.6188877
+}

@@ -1,0 +1,28 @@
+{
+ "content": {
+  "handler": "full_test",
+  "out": {
+   "all_green": true,
+   "check": {
+    "rc": 0,
+    "tail": "5/5 \u2014 COMPLIANT"
+   },
+   "mine": {
+    "bad": [],
+    "packets": 57
+   },
+   "pytest": {
+    "rc": 0,
+    "tail": "41 passed in 0.79s"
+   },
+   "validator": {
+    "rc": 0,
+    "tail": "s\": {\n  \"F3_compliant_5of5\": true,\n  \"F3_suite_green\": true,\n  \"F1_F2_F5_registry_tests\": true,\n  \"F_hypothesis_has_falsifiers\": true,\n  \"F4_alogs_cover_90pct\": true,\n  \"M_locked_no_spent\": true\n }\n}\n"
+   }
+  },
+  "task": "A43"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:fedbd7d922eed6af9394aaf836f7dbcc1b01a547547876373cd23b53fbcf77ee",
+ "ts": 1789041678.0004587
+}

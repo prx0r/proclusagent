@@ -1,0 +1,18 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/fleet-artifacts",
+    "prx0r/bitt",
+    "prx0r/dell",
+    "prx0r/evolabz",
+    "prx0r/llmdeals"
+   ]
+  },
+  "task": "A-auto-boot-57-13"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:09014dea3b28b18eb6adb9e9633cb1958a76130c1eb2a14162abd99c979c43c5",
+ "ts": 1789036329.6589003
+}

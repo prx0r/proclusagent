@@ -1,0 +1,18 @@
+{
+ "content": {
+  "handler": "boot_tests",
+  "out": {
+   "boot_tests": [
+    "prx0r/domainnamechecker",
+    "prx0r/redirect",
+    "prx0r/hxrmxs-truth-engine",
+    "prx0r/ip-graph",
+    "prx0r/knowledge-base-organism"
+   ]
+  },
+  "task": "A-auto-boot-49-20"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:001967969f3458a12bbb37269b6866216250ab0e0eb0652340dc269708d724e3",
+ "ts": 1789035620.4644837
+}

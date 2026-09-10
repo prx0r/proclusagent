@@ -1,0 +1,22 @@
+{
+ "content": {
+  "handler": "t2_sweep",
+  "out": {
+   "count": 8,
+   "extracted": [
+    "prx0r/x402",
+    "prx0r/x4022",
+    "prx0r/x402fun",
+    "prx0r/voiceagent",
+    "prx0r/llmdeals",
+    "prx0r/redirect",
+    "prx0r/agentseo",
+    "prx0r/domainnamechecker"
+   ]
+  },
+  "task": "A9"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:674167ab01a384617fcb33fbd85104f34dfdffac104385b35eeadb3ebca4be33",
+ "ts": 1789035600.1577034
+}

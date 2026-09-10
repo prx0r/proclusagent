@@ -1,0 +1,18 @@
+{
+ "content": {
+  "handlers": [
+   "drain",
+   "prop-02/03",
+   "mcp-selfcheck",
+   "agents-refresh"
+  ],
+  "out": {
+   "check": "5/5 if shown",
+   "pytest": "pending-see-above"
+  },
+  "task": "ALL-A-2"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:9705a8c8e184f0a0e6fa283908bc230c42edbbe7de7cb4129635001b76273296",
+ "ts": 1789038326.6970055
+}

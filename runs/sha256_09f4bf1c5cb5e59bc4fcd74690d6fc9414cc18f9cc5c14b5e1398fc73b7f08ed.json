@@ -1,0 +1,14 @@
+{
+ "content": {
+  "handler": "verify",
+  "out": {
+   "bad": [],
+   "ok": true,
+   "packets": 57
+  },
+  "task": "A26b"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:09f4bf1c5cb5e59bc4fcd74690d6fc9414cc18f9cc5c14b5e1398fc73b7f08ed",
+ "ts": 1789037699.0998201
+}

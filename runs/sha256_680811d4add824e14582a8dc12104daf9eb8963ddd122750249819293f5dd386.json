@@ -1,0 +1,13 @@
+{
+ "content": {
+  "handler": "index",
+  "out": {
+   "digest": "8e339820821e31e9",
+   "packets": 49
+  },
+  "task": "A-auto-idx-35620"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:680811d4add824e14582a8dc12104daf9eb8963ddd122750249819293f5dd386",
+ "ts": 1789035620.5162919
+}

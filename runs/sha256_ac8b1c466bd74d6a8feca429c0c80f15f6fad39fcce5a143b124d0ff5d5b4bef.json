@@ -1,0 +1,15 @@
+{
+ "content": {
+  "handler": "controller-build",
+  "out": {
+   "check": "5/5",
+   "phases": "recon-scaffold-build-verify-tournament",
+   "samples": "wal37+dbhead5+logtail1+tool51k",
+   "tests": "13 passed"
+  },
+  "task": "MINIME-V0"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:ac8b1c466bd74d6a8feca429c0c80f15f6fad39fcce5a143b124d0ff5d5b4bef",
+ "ts": 1789037957.0819287
+}

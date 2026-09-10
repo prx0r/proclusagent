@@ -1,0 +1,13 @@
+{
+ "content": {
+  "handler": "tournament_baseline",
+  "out": {
+   "rc": 0,
+   "tail": "#1 seed3 tests_green=True compliant=True (5/5) evidence=4 :: 4 passed in 0.08s\n#2 seed1 tests_green=True compliant=True (5/5) evidence=0 :: 4 passed in 0.36s\n#3 seed2 tests_green=True compliant=True (5/5) evidence=0 :: 4 passed in 0.02s\nreceipt: runs/sha256_8540ddd808d9a04364e6f063581f352619ad0cd872d20e09b2f16bd1b1267d19.json\n"
+  },
+  "task": "A12"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:de0a73aaddb194c44b5636b56717e1ac27e838b314f280efce878aa7e2e71638",
+ "ts": 1789035602.1360064
+}
