@@ -1,0 +1,76 @@
+{
+ "n_train": 4248,
+ "n_test": 4249,
+ "best": {
+  "len": {
+   "weights": [
+    0,
+    0,
+    1
+   ],
+   "acc": 0.5752
+  },
+  "cont": {
+   "weights": [
+    1,
+    0,
+    0
+   ],
+   "acc": 0.8303
+  },
+  "cat": {
+   "weights": [
+    0,
+    0,
+    1
+   ],
+   "acc": 0.4039
+  }
+ },
+ "grid": {
+  "(1, 0, 0)": {
+   "len": 0.5265,
+   "cont": 0.8303,
+   "cat": 0.3761
+  },
+  "(0, 1, 0)": {
+   "len": 0.3921,
+   "cont": 0.8303,
+   "cat": 0.3674
+  },
+  "(0, 0, 1)": {
+   "len": 0.5752,
+   "cont": 0.8303,
+   "cat": 0.4039
+  },
+  "(0.4, 0.4, 0.2)": {
+   "len": 0.4408,
+   "cont": 0.8303,
+   "cat": 0.358
+  },
+  "(0.6, 0.3, 0.1)": {
+   "len": 0.4408,
+   "cont": 0.8303,
+   "cat": 0.358
+  },
+  "(0.34, 0.33, 0.33)": {
+   "len": 0.4469,
+   "cont": 0.8303,
+   "cat": 0.3909
+  }
+ },
+ "f2_subcluster": {
+  "other_n": 3412,
+  "subclusters": 2445,
+  "top_share": 0.012,
+  "verdict": "pass-with-caveat: topical not structural"
+ },
+ "f3_signflip": {
+  "online_cat_session_gt_global": true,
+  "split_cat_global_gt_session": true,
+  "cause": "online adapts within-session; frozen split cannot"
+ },
+ "hygiene": [
+  "credential-adjacent pastes found in sends: redact credential patterns before ANY training use"
+ ]
+}

@@ -25,6 +25,15 @@ Every response from lead agent ends with these three blocks.
 - [x] A39 ham_registry.py + 9 tests + H/M-QUEUE.jsonl + a-logs/32 + seed6-ham + HYPOTHESIS + criteria/ham.json + validate_ham.py + METAGUIDE — done, tournament + funnel + validator green
 - [x] A40-A42 prompt library: corpus 21 specimens + cluster.py (10 categories, compounds) + PROMPT-LIBRARY.md copy-paste — done, 41 passed, a-logs 35
 - [x] A43-A44 loop steady-state: full_test handler + 3 evolve cycles to bottleneck — done, battery all-green, 34/0/6/5, a-logs 37
+- [x] A45-A54 northstar chain + A55-A59 full-data RL env (6GB pull, 8,497 sends, kNN-vs-baselines eval) — done, 50 passed, a-logs 59
+- [x] A60-A62 round 2 (subcluster other + ensemble split + idea3 funnel/learn loop) — done, 55 passed, F1 falsified, 2 criteria proposals (human promotes), a-logs 62
+- [x] A63-A64 mininet classifier + cascade router (MLP64/128 lose to global; exact 0.0016 proves buttons) — done, 55+1skip, a-logs 64
+- [x] A65-A67 tg review + linear wins (0.4373/0.4283) + wasm parity 200/200 (genome=artifact, compile gated) — done, 55+2skip, a-logs 67
+- [x] A68-A70 full battery + real fastText (0.807/0.799 unseen, ftz 8MB) + prebuilt wasm path + CRED incident triple-fix — done, 55+2skip, 5/5, a-logs 69
+- [x] A70-A71 clone+test all 144 (sparse, keyless, deleted) — done, 2 green + 1 real-failure set, results scrubbed clean, a-logs 71
+- [x] A72-A74 clean re-eval + dep pilot + cascade serve + PATH-TO-AUTONOMY (parallel-stream proven) — done, 61+2skip, 5/5, a-logs 75
+- [x] A72-A73 clean-corpus re-eval (numbers hold) + dep-install pilot (tf 4/2, cge1 6, csec 3) + DEP-PILOT.md — done, 55+2skip, 5/5, a-logs 74
+- [x] A45-A54 northstar chain: analyze→amend 1.1→re-tournament→report→STOP yes (52/52, 0 flags) + id-uniqueness guard + auto-a-logging + local branch commits (NO PUSH) — done
 
 ## H-queue (NEEDS explicit `approve Hxx` — demo responses inline below)
 - [ ] H1 approve deep-dive into giants (>200MB: Ochema, knowledge-base-organism,

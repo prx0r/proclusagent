@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "f1": "falsified",
+   "f3": "fired-as-designed",
+   "learn": "2 proposals, human promotes"
+  },
+  "task": "ROUND2"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:dd14cbaa0407e20a484758f6331ba263661155fa370277960069f3c5d3bbee10",
+ "ts": 1789045993.5686567
+}

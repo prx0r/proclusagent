@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "clean_holds": true,
+   "pilot": "tf-4/2 cge1-6 csec-3",
+   "spec": "DEP-PILOT.md"
+  },
+  "task": "CONTINUE-1"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:7ee418a5c7d7ed8bcbd638607f49a177c8fb3ec207244673d3ff68b1a13b92fe",
+ "ts": 1789049170.209791
+}

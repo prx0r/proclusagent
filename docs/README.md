@@ -29,6 +29,12 @@
 | `PREDICTIVE-UI.md` | Buttons-that-learn-you plan + implementation status |
 | `STACK-DECISION.md` | Retrieval-now / LoRA-gated verdict + pilot numbers |
 | `PROMPT-LIBRARY.md` | Copy-paste prompt library (10 mined categories, HAM-mapped) |
+| `RL-ENV.md` + `RL-RESULTS.json` | Offline bandit env on 8,497 sends: fam-hit@3 0.671, ensemble verdict |
+| `MININET.md` | Classifier + cascade: net loses, exact-match 0.16% proves buttons |
+| `PATH-TO-AUTONOMY.md` | THE GOAL: easy-first autonomy, live learning, handover at threshold |
+| `TG-REVIEW.md` + `WASM-PLAN.md` | tg scorer-smithy thesis; our classifier as genome (parity 200/200) |
+| `NORTHSTAR.md` | The autonomous tournament chain (binding) |
+| `A-REPORT.md` | Per-task validation evidence for peer review (STOP: yes) |
 
 Mine (lives in seed0, linked not vendored): `/home/ubuntu/seed0/mine/architectures/`
 (57 packets, INDEX.jsonl). Queues: `QUEUE.md` + `A-QUEUE.jsonl`. Loop: `../aloop.py`.

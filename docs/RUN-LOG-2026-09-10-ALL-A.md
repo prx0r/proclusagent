@@ -71,3 +71,20 @@ No manual actions. No H/M executed. Secrets: none touched (grep gate green).
 - Cycles 1-3 (`--until-blocked --max 12 --evolve-loop`): cycle 1 ran A43 + auto-verify;
   cycles 2-3 clean bottlenecks, evolve minted nothing — steady state 34/0/6/5.
 - a-logs 37 records. Cost $0, no manual, no H/M executed, secret-grep green.
+
+## Eighth drain: northstar chain (STOP: yes)
+- NORTHSTAR set: results→analysis→amend x.1→branch/commit→re-tournament→compare→
+  a-log match→stop→A-REPORT→peer review→repeat. Branches (local, NO PUSH):
+  proclusagent `chain/session-logs-1` (9d12462), seed0 `chain/ham-tournament-1` (3ca0233).
+- Round 1 finding: amendments applied but ev counts stayed 0 — evidence files named
+  `round-note-*.md` miss the evidence-name filter (filename, not dir, is scanned).
+  Harness caught a no-op treatment; renamed to `evidence-*.md` → all four ev=1,
+  order preserved (4>2>1 tiers hold; within-tier order stable).
+- Peer-review repairs from A-REPORT v1 flags: id-uniqueness guard (dupes renamed),
+  run_once auto-a-logging (class fix: every completion logs itself), self-logging
+  report (no self-reference gap), manual-work tasks queued (A40-A44).
+- Final: 53 done / 0 open, a-logs 52+/52 matched, flags 0, STOP yes.
+- Next round design (queued on approval of nothing — it IS an A-task, runs on `go`):
+  differential test — bump ONE ev-1 seed to ev-2, watch for jump over seed5's ev-2 tier.
+- Cost $0, no manual, no H/M executed (M-queue zero spent), secret-grep green
+  (scan hits are pattern-strings in tests/docs, zero live tokens).

@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "fam_hit3": 0.671,
+   "n": 8497,
+   "verdict": "ensemble, kNN second everywhere"
+  },
+  "task": "RL-FULL"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:e49994c2fa826c504b14715805121128400235403c14e75fe12e6f620573acbb",
+ "ts": 1789043359.3540683
+}

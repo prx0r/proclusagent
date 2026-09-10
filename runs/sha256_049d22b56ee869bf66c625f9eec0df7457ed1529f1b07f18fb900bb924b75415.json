@@ -1,0 +1,18 @@
+{
+ "content": {
+  "out": {
+   "branches": [
+    "chain/session-logs-1",
+    "chain/ham-tournament-1"
+   ],
+   "flags": 0,
+   "matched": "52/52",
+   "push": "locked",
+   "stop": true
+  },
+  "task": "NORTHSTAR-CHAIN"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:049d22b56ee869bf66c625f9eec0df7457ed1529f1b07f18fb900bb924b75415",
+ "ts": 1789042302.5256317
+}

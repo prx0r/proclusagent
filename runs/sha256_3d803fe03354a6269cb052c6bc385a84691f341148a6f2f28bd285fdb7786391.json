@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "cascade": "green",
+   "parallel_stream": "proven",
+   "phases": 5
+  },
+  "task": "PATH-AUTONOMY"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:3d803fe03354a6269cb052c6bc385a84691f341148a6f2f28bd285fdb7786391",
+ "ts": 1789049822.530311
+}

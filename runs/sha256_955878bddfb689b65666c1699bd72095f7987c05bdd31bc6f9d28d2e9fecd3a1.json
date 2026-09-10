@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "cloned": "144/144",
+   "dep_blocked": 49,
+   "green": 2,
+   "real_fail": "telegraph-factjudge-6"
+  },
+  "task": "CLONE-TEST-ALL"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:955878bddfb689b65666c1699bd72095f7987c05bdd31bc6f9d28d2e9fecd3a1",
+ "ts": 1789048461.931202
+}

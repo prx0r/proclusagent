@@ -1,0 +1,1 @@
+{"tau_auto": 0.9, "tau_buttons": 0.5, "note": "auto_proceed needs intent=ack AND conf>=tau_auto AND low blast radius; tune on live choice data (H-choice-UI)"}

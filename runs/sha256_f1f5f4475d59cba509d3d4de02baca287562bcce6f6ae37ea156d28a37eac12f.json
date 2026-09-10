@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "explicit": 0.4283,
+   "genome": "artifact-not-commit",
+   "linear": 0.4373,
+   "parity": "200/200"
+  },
+  "task": "WASM-PARITY"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:f1f5f4475d59cba509d3d4de02baca287562bcce6f6ae37ea156d28a37eac12f",
+ "ts": 1789047721.8815966
+}

@@ -1,0 +1,17 @@
+{
+ "content": {
+  "out": {
+   "all_fixed": true,
+   "check": "5/5",
+   "cred_incidents": 3,
+   "fasttext": "0.807/0.799",
+   "parity": "200/200 live",
+   "pytest": "55+2skip",
+   "tournament": "green"
+  },
+  "task": "FULL-BATTERY-2"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:cb0dece4746382f42a3812def796f5d4937958b682d3dbd70fe49cbb7bffb497",
+ "ts": 1789048268.0903172
+}

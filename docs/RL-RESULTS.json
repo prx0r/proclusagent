@@ -1,0 +1,38 @@
+{
+ "n_scored": 8496,
+ "index": 8497,
+ "fam_hit3": 0.671,
+ "heads": {
+  "len": {
+   "knn": 0.5569,
+   "majority": 0.5856,
+   "random": 0.3304,
+   "global": 0.5856,
+   "session": 0.5856
+  },
+  "cont": {
+   "knn": 0.8091,
+   "majority": 0.8402,
+   "random": 0.5071,
+   "global": 0.8402,
+   "session": 0.8402
+  },
+  "cat": {
+   "knn": 0.4176,
+   "majority": 0.3972,
+   "random": 0.1224,
+   "global": 0.3972,
+   "session": 0.4355
+  }
+ },
+ "fam_dist": {
+  "ack": 3416,
+  "other": 3412,
+  "question": 626,
+  "neg": 348,
+  "review": 315,
+  "task": 139,
+  "paste": 126,
+  "pathref": 115
+ }
+}

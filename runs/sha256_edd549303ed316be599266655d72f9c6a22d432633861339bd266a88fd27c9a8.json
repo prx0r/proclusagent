@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "acc128": 0.3836,
+   "exact": 0.0016,
+   "verdict": "buttons-not-autosend"
+  },
+  "task": "MININET"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:edd549303ed316be599266655d72f9c6a22d432633861339bd266a88fd27c9a8",
+ "ts": 1789046613.468757
+}

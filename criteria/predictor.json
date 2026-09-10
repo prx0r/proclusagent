@@ -1,0 +1,1 @@
+{"checks": [{"id": "metrics", "path": "metrics.json", "type": "file_exists"}, {"id": "verdict", "path": "metrics.json", "text": "\"verdict\"", "type": "contains"}, {"id": "best", "path": "metrics.json", "text": "\"best\"", "type": "contains"}]}
