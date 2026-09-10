@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "backup": "yes",
+   "binary": "1.18.30",
+   "mcp": "8 tools live",
+   "predict_cmd": "yes"
+  },
+  "task": "WIRING-LIVE"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:a030f50635c675845b41954dbdff4c0a375be5d0d9b64fb1dfa298a2c800bc44",
+ "ts": 1789060501.5651984
+}

@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "chains": "queue+log",
+   "keys": 10,
+   "lora": "gated-not-denied"
+  },
+  "task": "TENKEYS"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:33e96da47fa1782f3a6647c1415438994155ba7073735f8fe5e580b3e0125eaa",
+ "ts": 1789067776.1926713
+}

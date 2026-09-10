@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "fi2010": "940MB verified",
+   "gated": "untouched",
+   "score": "~26"
+  },
+  "task": "DATA-HUNT-1"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:79179bb256fa8919bbd43ed1837cb9f1666cb7f3b35e1b82ddcc4765c2eee716",
+ "ts": 1789052853.1910295
+}

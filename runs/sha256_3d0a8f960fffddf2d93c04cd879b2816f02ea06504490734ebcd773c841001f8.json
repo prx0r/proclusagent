@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "demo": "live",
+   "tests": 4,
+   "usage": "RECIPES"
+  },
+  "task": "CLI-SHIP"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:3d0a8f960fffddf2d93c04cd879b2816f02ea06504490734ebcd773c841001f8",
+ "ts": 1789059721.6430454
+}

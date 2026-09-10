@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "m6": "proposed-cap-25",
+   "pairs": 13412
+  },
+  "task": "GPU-PLAN"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:25644670672e1aa803f5f9dcef71ce718da034afc4a2615fee514fe57781663c",
+ "ts": 1789073224.4991877
+}

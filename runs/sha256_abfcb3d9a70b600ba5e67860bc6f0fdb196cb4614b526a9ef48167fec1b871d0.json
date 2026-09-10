@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "auto": 0,
+   "default": "text-retained",
+   "hit3": 0.52,
+   "next": "slice-conditional"
+  },
+  "task": "FAMRANK"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:abfcb3d9a70b600ba5e67860bc6f0fdb196cb4614b526a9ef48167fec1b871d0",
+ "ts": 1789059461.0113833
+}

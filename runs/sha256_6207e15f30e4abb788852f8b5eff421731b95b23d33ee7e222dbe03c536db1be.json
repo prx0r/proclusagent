@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "merge": "held-for-human",
+   "tests": "green"
+  },
+  "task": "TYPETAGS"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:6207e15f30e4abb788852f8b5eff421731b95b23d33ee7e222dbe03c536db1be",
+ "ts": 1789060744.7664773
+}

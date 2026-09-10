@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "lse_gsk": "726666 rows verified",
+   "scan": "PASS 0 signals",
+   "score": "~33"
+  },
+  "task": "GITGOBLIN-UK"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:806ea9e586a69421b939ae870de9aa79efcb165839252384f64326a1de8680ac",
+ "ts": 1789053619.9591997
+}

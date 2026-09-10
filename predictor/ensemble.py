@@ -54,6 +54,45 @@ def predict(send, prev, train_idx, train_rows, weights, k=5):
         out[head] = max(cands, key=lambda l: ws * ss.get(l, 0) + wk * ks.get(l, 0) +
                         wg * gs.get(l, 0))
     return out
+def cross_eval(train_sends, test_sends, weights_list=None, k=5):
+    """Train on one box, test on another: true generalization, no shared sessions.
+    Same frozen-index protocol as split_eval (no peeking, no online update)."""
+    from collections import defaultdict
+    train_idx = _index(train_sends)
+    inv = defaultdict(set)
+    for i, (ct, _) in enumerate(train_idx):
+        for tok in ct:
+            inv[tok].add(i)
+    if weights_list is None:
+        weights_list = [(1, 0, 0), (0, 1, 0), (0, 0, 1), (0.4, 0.4, 0.2)]
+    gs = {h: _dist(train_sends, h) for h in ("len", "cont", "cat")}
+    res = {}
+    for w in weights_list:
+        hits = {h: [0, 0] for h in ("len", "cont", "cat")}
+        for s in test_sends:
+            ct = _ctoks(s, None)
+            cand = set()
+            for tok in ct:
+                cand |= inv.get(tok, set())
+            scored = {}
+            for h in ("len", "cont", "cat"):
+                sims = sorted(((jaccard(ct, train_idx[i][0]), i) for i in cand),
+                              key=lambda t: -t[0])[:k]
+                votes = Counter(_label(train_sends[i], h) for _, i in sims)
+                tot = sum(votes.values()) or 1
+                scored[h] = {l: v / tot for l, v in votes.items()}
+            ss = {h: _dist(train_sends, h, s["session"]) for h in ("len", "cont", "cat")}
+            for h in hits:
+                ws, wk, wg = w
+                cands = set(scored[h]) | set(gs[h]) | set(ss[h])
+                if not cands:
+                    continue
+                pred = max(cands, key=lambda l: ws * ss[h].get(l, 0) + wk * scored[h].get(l, 0) +
+                           wg * gs[h].get(l, 0))
+                hits[h][0] += (pred == _label(s, h))
+                hits[h][1] += 1
+        res[str(w)] = {h: round(v[0] / v[1], 4) if v[1] else None for h, v in hits.items()}
+    return {"n_train": len(train_sends), "n_test": len(test_sends), "grid": res}
 def split_eval(sends, weights_list=None, k=5):
     from collections import defaultdict
     mid = len(sends) // 2

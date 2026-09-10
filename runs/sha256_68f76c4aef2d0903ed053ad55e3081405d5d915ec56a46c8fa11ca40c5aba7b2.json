@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "base_rate": 0.16,
+   "gate": "closed-by-measurement",
+   "markov_prec": 0.195,
+   "next": "dialog-state"
+  },
+  "task": "CONTINUE-GATE"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:68f76c4aef2d0903ed053ad55e3081405d5d915ec56a46c8fa11ca40c5aba7b2",
+ "ts": 1789051595.784207
+}

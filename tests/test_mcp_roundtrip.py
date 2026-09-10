@@ -34,3 +34,29 @@ def test_predict_suggest_and_log(tmp_path):
     out2 = call("predict.log_choice", {"store": store, "session": "s",
                 "context": "ctx", "shown": shown, "picked": 0})
     assert out2["ok"] and out2["result"]["level"] in ("suggest", "predict", "auto")
+def test_mcp_initialize():
+    from mcp_server import mcp_handle
+    r = mcp_handle({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}})
+    assert r["result"]["serverInfo"]["name"] == "proclusagent"
+def test_mcp_tools_list():
+    from mcp_server import mcp_handle
+    r = mcp_handle({"jsonrpc": "2.0", "id": 2, "method": "tools/list"})
+    names = {t["name"] for t in r["result"]["tools"]}
+    assert {"mine.search", "predict.suggest", "predict.log_choice"} <= names
+    assert all("inputSchema" in t for t in r["result"]["tools"])
+def test_mcp_call_predict(tmp_path):
+    from mcp_server import mcp_handle
+    store = str(tmp_path / "c.jsonl")
+    r = mcp_handle({"jsonrpc": "2.0", "id": 3, "method": "tools/call",
+                    "params": {"name": "predict.suggest",
+                               "arguments": {"candidates": ["ok", "ship it"], "store": store}}})
+    import json as _j
+    assert _j.loads(r["result"]["content"][0]["text"])["options"]
+def test_mcp_unknown_and_notification():
+    from mcp_server import mcp_handle
+    r = mcp_handle({"jsonrpc": "2.0", "id": 4, "method": "nope"})
+    assert r["error"]["code"] == -32601
+    assert mcp_handle({"jsonrpc": "2.0", "method": "notifications/initialized"}) is None
+    r = mcp_handle({"jsonrpc": "2.0", "id": 5, "method": "tools/call",
+                    "params": {"name": "nope.tool", "arguments": {}}})
+    assert r["error"]["code"] == -32602

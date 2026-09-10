@@ -1,0 +1,11 @@
+{
+ "content": {
+  "out": {
+   "doc": "EXPERIMENT-REF.md"
+  },
+  "task": "EXPREF"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:be96dd65f391fa702643575a402cd3b8187b94ee75fbe276c5f6e355d8907d20",
+ "ts": 1789067268.812015
+}

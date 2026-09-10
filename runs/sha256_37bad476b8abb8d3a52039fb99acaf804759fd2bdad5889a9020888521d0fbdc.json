@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "boxes": 11,
+   "markov1": 0.371,
+   "verdict": "coherence-not-chains"
+  },
+  "task": "INTENT-MAP"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:37bad476b8abb8d3a52039fb99acaf804759fd2bdad5889a9020888521d0fbdc",
+ "ts": 1789073713.7380297
+}

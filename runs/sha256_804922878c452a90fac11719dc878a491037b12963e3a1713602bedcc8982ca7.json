@@ -1,0 +1,19 @@
+{
+ "content": {
+  "handler": "funnel_collect",
+  "out": {
+   "idea": "K3 research loop: verse to commentary to scene stub with citations",
+   "mode": "collect-only true",
+   "rc": 0,
+   "seeds": [
+    "seed1",
+    "seed2",
+    "seed3"
+   ]
+  },
+  "task": "A81"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:804922878c452a90fac11719dc878a491037b12963e3a1713602bedcc8982ca7",
+ "ts": 1789052382.3136542
+}

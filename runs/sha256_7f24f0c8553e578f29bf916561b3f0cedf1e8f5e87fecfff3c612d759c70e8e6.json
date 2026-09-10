@@ -1,0 +1,14 @@
+{
+ "content": {
+  "out": {
+   "crossed": "75pct",
+   "spread": "1107bps",
+   "trade_join": "48k/48k",
+   "verdict": "events-proven-book-falsified"
+  },
+  "task": "RECONCILE"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:7f24f0c8553e578f29bf916561b3f0cedf1e8f5e87fecfff3c612d759c70e8e6",
+ "ts": 1789057091.456103
+}

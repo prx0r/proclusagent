@@ -27,3 +27,11 @@ def test_predict_uses_train_only():
     idx = _index(data[:3])
     p = predict(data[5], None, idx, data[:3], (0, 1, 0))
     assert set(p) == {"len", "cont", "cat"}
+def test_cross_eval_disjoint():
+    from predictor.ensemble import cross_eval
+    tr = [{"session": "a", "title": "T", "proj": "p", "agent": "b", "text": "ok"},
+          {"session": "a", "title": "T", "proj": "p", "agent": "b", "text": "verify it now"}]
+    te = [{"session": "ZZZ-unseen", "title": "T", "proj": "p", "agent": "b", "text": "ok"}]
+    r = cross_eval(tr, te, weights_list=[(0, 0, 1)])
+    assert r["n_train"] == 2 and r["n_test"] == 1
+    assert set(r["grid"]["(0, 0, 1)"]) == {"len", "cont", "cat"}

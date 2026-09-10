@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "2018prints": "unusable-negative",
+   "databento": "human-visit-H",
+   "lob_bench": "triple-confirm"
+  },
+  "task": "ROUND5"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:0df9710676af047721a0d293b7f792f7be9e740864f30ab8e4dd6b6348c371c6",
+ "ts": 1789054449.243882
+}

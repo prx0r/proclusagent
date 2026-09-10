@@ -43,3 +43,12 @@ cd /home/ubuntu/proclusagent && python3 validate_ham.py; echo exit=$?
 ```
 Rule: re-run collect-only after ANY seed move (rubric paths mirror layout).
 Full method: `docs/METAGUIDE.md`.
+
+## Predict CLI — usable right now ($0, learns from every press)
+```bash
+cd /home/ubuntu/proclusagent
+printf '\n' | python3 -m predictor.cli --session demo --options ok "verify it" "ship it"
+# [1] ok (0.2)  <-- default, Enter accepts / [2] / [3] / pick 1/2/3/Enter/type
+# every outcome appends to ./predictor_choices.jsonl (the training data)
+# press 3 ten times and "ship it" becomes the Enter default (proven in tests)
+```

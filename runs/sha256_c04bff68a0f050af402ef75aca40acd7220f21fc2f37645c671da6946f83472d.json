@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "adapter_tests": 4,
+   "schema": "decoded-17/15/17",
+   "seq_viol": 35
+  },
+  "task": "ROUND4"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:c04bff68a0f050af402ef75aca40acd7220f21fc2f37645c671da6946f83472d",
+ "ts": 1789054203.1650004
+}

@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "crossbox": "blend-wins-x2",
+   "handover": "HANDOVER-20260910T1946Z.md"
+  },
+  "task": "HANDOVER-TS"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:4de45a70879e684e05a3cae55bb1322847a6a78f45d2586e8d1ac4c0cd35e34d",
+ "ts": 1789069607.1436706
+}

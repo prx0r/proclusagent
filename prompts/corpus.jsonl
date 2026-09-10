@@ -19,3 +19,9 @@
 {"id": "w03", "source": "wal", "text": "Build Next.js ereader with Pure/Scholarly/Explained modes"}
 {"id": "w04", "source": "wal", "text": "Upload cleaned texts + site to Cloudflare Pages/R2"}
 {"id": "w05", "source": "wal", "text": "Deploy to tantrafiles.xyz"}
+{"id": "p17", "source": "chat", "text": "would it help if i click a button for the type of response im giving or select from prompts as im reusing variants all the time"}
+{"id": "p18", "source": "chat", "text": "i want 5 hermes agents to take the thesis and use the a-framework to web search spec it all out then autonomously build the app start to finish over minutes/hours logging all activity not stopping until they have a working agent then review each final product then review each seed which was best and why create seed1.1 with modification then run it all again"}
+{"id": "p19", "source": "chat", "text": "the endgame is the agent framework with a-logs a-tasks and im hitting buttons until it can predict what im going to say and if it cant do so with confidence it prompts to h-task"}
+{"id": "p20", "source": "chat", "variant_of": "p06", "text": "yeah now do all a-tasks with 0$ et 10 work autonomously, review then propose 10 more with justification, then we repeat this loop"}
+{"id": "p21", "source": "chat", "variant_of": "p09", "text": "ok ensure entire repo is organised and there explanations and documentation and recipes and agents.md review /cg for how to do this"}
+{"id": "p22", "source": "chat", "variant_of": "northstar", "text": "run the tournament again making changes to seeds making seed1.1 from results and analysis"}

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""mcp_server.py — stdlib-only stdio MCP-ish server for proclusagent mine. $0 local.
+"""mcp_server.py — stdlib-only stdio server for the proclusagent mine. $0 local.
 
+Speaks REAL MCP (JSON-RPC 2.0 over stdio: initialize / tools/list / tools/call),
+plus the legacy {id, tool, args} dialect (kept for existing tests/callers).
 Tools: mine.search, mine.packet_get, kernels.list, tournament.baseline,
-loop.status, loop.mint. No network listener, no secrets, read-only except mint-preview.
-Protocol: newline-delimited JSON {id, tool, args} -> {id, ok, result|error}.
+loop.status, loop.mint, predict.suggest, predict.log_choice.
+No network listener, no secrets; only predict.log_choice writes (choice log).
 """
 import json, sys, subprocess
 from pathlib import Path
@@ -52,14 +54,18 @@ def loop_mint(args):
     return json.loads(r.stdout or "{}")
 
 def predict_suggest(args):
-    from predictor.suggest import suggest
+    from predictor.suggest import suggest, suggest_typed
+    if args.get("type"):
+        return suggest_typed(args.get("candidates", []),
+                             args.get("store", str(ROOT / "predictor_choices.jsonl")),
+                             args["type"], args.get("top_k", 3), args.get("priors"))
     return suggest(args.get("candidates", []), args.get("store", str(ROOT / "predictor_choices.jsonl")),
                    args.get("top_k", 3), args.get("priors"))
 def predict_log_choice(args):
     from predictor.suggest import accept
     accept(args.get("store", str(ROOT / "predictor_choices.jsonl")), args.get("session", ""),
            args.get("context", ""), args.get("shown", []), args.get("picked"),
-           args.get("typed_own"))
+           args.get("typed_own"), args.get("type_tag"))
     from predictor.autonomy import level
     return {"level": level(args.get("store", str(ROOT / "predictor_choices.jsonl")))}
 
@@ -74,13 +80,75 @@ def handle(req):
     try: return {"id": req.get("id"), "ok": True, "result": fn(req.get("args") or {})}
     except Exception as e: return {"id": req.get("id"), "ok": False, "error": str(e)[:300]}
 
+TOOL_SCHEMAS = {
+    "mine.search": ("Search architecture packets by keyword/family.",
+                    {"type": "object", "properties": {
+                        "q": {"type": "string"}, "family": {"type": "string"}}}),
+    "mine.packet_get": ("Get one full architecture packet + notes excerpt.",
+                        {"type": "object", "required": ["packet"], "properties": {
+                            "packet": {"type": "string"}}}),
+    "kernels.list": ("List P0-P7 ladder + competitor kernels.",
+                     {"type": "object", "properties": {}}),
+    "tournament.baseline": ("Run baseline tournament seeds 1-3, return tail.",
+                            {"type": "object", "properties": {}}),
+    "loop.status": ("A/H/M queue counts.", {"type": "object", "properties": {}}),
+    "loop.mint": ("Preview auto-minted follow-up tasks (no run).",
+                  {"type": "object", "properties": {}}),
+    "predict.suggest": ("Top-k scored options for candidates.",
+                        {"type": "object", "properties": {
+                            "candidates": {"type": "array", "items": {"type": "string"}},
+                            "store": {"type": "string"}, "top_k": {"type": "integer"},
+                            "priors": {"type": "object"}}}),
+    "predict.log_choice": ("Log one choice turn; returns autonomy level.",
+                           {"type": "object", "properties": {
+                               "store": {"type": "string"}, "session": {"type": "string"},
+                               "context": {"type": "string"},
+                               "shown": {"type": "array", "items": {"type": "string"}},
+                               "picked": {"type": ["integer", "null"]},
+                               "typed_own": {"type": ["string", "null"]}}}),
+}
+def mcp_handle(obj):
+    """Real MCP (JSON-RPC 2.0). Returns response dict, or None for notifications."""
+    if "method" not in obj:
+        return handle(obj)  # legacy dialect
+    mid, method = obj.get("id"), obj.get("method")
+    if method.startswith("notifications/"):
+        return None
+    if method == "initialize":
+        return {"jsonrpc": "2.0", "id": mid,
+                "result": {"protocolVersion": "2024-11-05",
+                           "capabilities": {"tools": {}},
+                           "serverInfo": {"name": "proclusagent", "version": "0.1"}}}
+    if method == "tools/list":
+        return {"jsonrpc": "2.0", "id": mid,
+                "result": {"tools": [{"name": n, "description": d, "inputSchema": s}
+                                     for n, (d, s) in TOOL_SCHEMAS.items()]}}
+    if method == "tools/call":
+        p = obj.get("params", {})
+        fn = TOOLS.get(p.get("name"))
+        if not fn:
+            return {"jsonrpc": "2.0", "id": mid,
+                    "error": {"code": -32602, "message": f"unknown tool {p.get('name')}"}}
+        try:
+            out = fn(p.get("arguments") or {})
+            return {"jsonrpc": "2.0", "id": mid,
+                    "result": {"content": [{"type": "text", "text": json.dumps(out)[:4000]}]}}
+        except Exception as e:
+            return {"jsonrpc": "2.0", "id": mid,
+                    "result": {"content": [{"type": "text", "text": f"error: {e}"[:300]}],
+                               "isError": True}}
+    return {"jsonrpc": "2.0", "id": mid,
+            "error": {"code": -32601, "message": f"unknown method {method}"}}
+
 def main():
     for line in sys.stdin:
         line = line.strip()
         if not line: continue
         try: req = json.loads(line)
         except Exception: continue
-        sys.stdout.write(json.dumps(handle(req)) + "\n"); sys.stdout.flush()
+        resp = mcp_handle(req)
+        if resp is not None:
+            sys.stdout.write(json.dumps(resp) + "\n"); sys.stdout.flush()
 
 if __name__ == "__main__":
     main()

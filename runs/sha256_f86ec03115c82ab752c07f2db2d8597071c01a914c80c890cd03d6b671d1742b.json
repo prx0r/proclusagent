@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "alpha": "online-not-offline",
+   "difftest": "seed1-#2"
+  },
+  "task": "CONTINUE-2"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:f86ec03115c82ab752c07f2db2d8597071c01a914c80c890cd03d6b671d1742b",
+ "ts": 1789065248.0814512
+}

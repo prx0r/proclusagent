@@ -1,0 +1,19 @@
+{
+ "content": {
+  "handler": "funnel_collect",
+  "out": {
+   "idea": "K1 ontology: ingest 5 verses, emit typed objects+edges+1 falsifiable claim",
+   "mode": "collect-only true",
+   "rc": 0,
+   "seeds": [
+    "seed1",
+    "seed2",
+    "seed3"
+   ]
+  },
+  "task": "A80"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:eb1927f8a8aa5b5d679903eb81a8f7d52b73510998464cbddfa1a558c0946576",
+ "ts": 1789052382.309974
+}

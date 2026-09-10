@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "joint_best": 0.193,
+   "queue": "57/0",
+   "thread": "closed"
+  },
+  "task": "DO-ALL"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:959332c56e3a18b3924ac0e7ae5cbf27611dbd7ac0ca1d9007376703da0c3444",
+ "ts": 1789052391.6229675
+}

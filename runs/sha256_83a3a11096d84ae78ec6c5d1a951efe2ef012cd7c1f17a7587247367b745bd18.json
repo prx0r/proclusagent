@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "p": "live",
+   "rollback": "bashrc.bak-20260910"
+  },
+  "task": "TERMINAL-APPLIED"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:83a3a11096d84ae78ec6c5d1a951efe2ef012cd7c1f17a7587247367b745bd18",
+ "ts": 1789067079.3074574
+}

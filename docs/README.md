@@ -32,6 +32,9 @@
 | `RL-ENV.md` + `RL-RESULTS.json` | Offline bandit env on 8,497 sends: fam-hit@3 0.671, ensemble verdict |
 | `MININET.md` | Classifier + cascade: net loses, exact-match 0.16% proves buttons |
 | `PATH-TO-AUTONOMY.md` | THE GOAL: easy-first autonomy, live learning, handover at threshold |
+| `BUTTONS-REPORT.md` | Product status: numbers, built, blocked, next |
+| `INSTRUMENT-THEORY.md` | External validation + build orders (DirectGPT→CogniGUI) |
+| `HANDOVER-20260910T1946Z.md` | Timestamped full-session handover (start here if fresh) |
 | `TG-REVIEW.md` + `WASM-PLAN.md` | tg scorer-smithy thesis; our classifier as genome (parity 200/200) |
 | `NORTHSTAR.md` | The autonomous tournament chain (binding) |
 | `A-REPORT.md` | Per-task validation evidence for peer review (STOP: yes) |

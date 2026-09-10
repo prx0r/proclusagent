@@ -1,0 +1,11 @@
+{
+ "content": {
+  "out": {
+   "defaults": "continue/yes/go"
+  },
+  "task": "REAL-OPTIONS"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:d3995e8d77ad67062868021c30c23819f0d9b30c54d4302ed9bcdd46a176cdab",
+ "ts": 1789063872.484364
+}

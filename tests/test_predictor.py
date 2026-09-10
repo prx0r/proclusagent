@@ -42,3 +42,46 @@ def test_persistence_roundtrip(tmp_path):
     p = tmp_path / "c.jsonl"
     log_choice(p, "s", "ctx", OPTS, 1)
     assert stats(p)["turns"] == 1
+def test_hierarchical_shrinkage_properties():
+    from predictor.scorer import hconfidence
+    assert hconfidence(0.6) == 0.6  # no data -> family value exactly
+    assert hconfidence(0.6, shown=1000, clicked=1000) > 0.99  # rich data -> instance
+    assert hconfidence(0.2, shown=1, clicked=1) < 0.9  # thin data stays shrunk
+    assert hconfidence(0.2, shown=1, clicked=1) > 0.2  # ...but moves toward evidence
+def test_hierarchical_beats_flat_when_thin():
+    from predictor.scorer import hconfidence, confidence
+    # thin misleading streak: 1/1 on a bad option; family says 0.1
+    flat = confidence(0.2, shown=1, clicked=1)  # 0.4 — overconfident
+    hier = hconfidence(0.1, shown=1, clicked=1, m=8.0)  # stays near family
+    assert hier < flat
+def test_family_stats_aggregate(tmp_path):
+    from predictor.scorer import family_stats
+    per = {"ok": {"shown": 10, "clicked": 8}, "yes": {"shown": 6, "clicked": 2}}
+    agg = family_stats(per, family_of=lambda t: "ack")
+    assert agg == {"ack": {"shown": 16, "clicked": 10}}
+def test_suggest_family_ranks_dense_family_first(tmp_path):
+    from predictor.suggest import suggest_family, accept
+    p = str(tmp_path / "c.jsonl")
+    for _ in range(20):
+        s = suggest_family(["ok", "verify the flux capacitor array"], p)
+        accept(p, "s", "ctx", [o["text"] for o in s["options"]], 0)
+    top = suggest_family(["ok", "verify the flux capacitor array"], p)["options"][0]
+    assert top["conf"] > 0.5
+def test_type_tagged_log_and_stats(tmp_path):
+    from predictor.store import stats
+    from predictor.suggest import suggest_typed, accept
+    p = str(tmp_path / "c.jsonl")
+    accept(p, "s", "ctx", ["ok", "verify it now please"], 0, type_tag="ack")
+    accept(p, "s", "ctx", ["ok", "verify it now please"], None,
+           typed_own="custom", type_tag="review")
+    st = stats(p)
+    assert st["per_type"]["ack"] == {"turns": 1, "top_hit": 1}
+    assert st["per_type"]["review"]["turns"] == 1
+    s = suggest_typed(["ok", "verify it now please"], p, "ack")
+    assert [o["text"] for o in s["options"]] == ["ok"]
+def test_old_rows_without_tag_still_parse(tmp_path):
+    import json
+    from predictor.store import stats
+    p = tmp_path / "c.jsonl"
+    p.write_text(json.dumps({"shown": ["a"], "picked": 0}) + "\n")
+    assert stats(str(p))["turns"] == 1

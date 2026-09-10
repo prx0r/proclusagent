@@ -21,10 +21,13 @@ def thresholds():
     return load_json("thresholds.json", {"tau_auto": 0.9, "tau_buttons": 0.5})
 def templates():
     return load_json("ack_templates.json", {"templates": ["ok"]})
-def serve(candidates, store_path, priors=None, blast_radius="low"):
-    """candidates: list[str]. Returns routing decision with confidence."""
+def serve(candidates, store_path, priors=None, blast_radius="low", rank_by="text"):
+    """candidates: list[str]. Returns routing decision with confidence.
+    rank_by: "text" (exact-text conf) or "family" (dense family conf)."""
+    from .suggest import suggest_family
     th = thresholds()
-    s = suggest(candidates, store_path, top_k=3, priors=priors)
+    rank_fn = suggest_family if rank_by == "family" else suggest
+    s = rank_fn(candidates, store_path, top_k=3, priors=priors)
     top = s["options"][0] if s["options"] else {"text": "", "conf": 0.0}
     fam = _family_of(top["text"])
     if blast_radius != "low":

@@ -34,14 +34,16 @@ def candidates(past, send, templates, k=5, _ptoks=None):
     return out
 def _optxt(o):
     return o.get("text") if isinstance(o, dict) else o
-def simulate(sends, store_path, templates, past=None):
+def simulate(sends, store_path, templates, past=None, ranker="text"):
     from .suggest import accept
+    from .cascade import serve
     past = list(past or [])
     ptoks = [set(normalize(p["text"]).split()) for p in past]
     hits, enters, autos, calib = [], [], [], {}
     for s in sends:
         cands = candidates(past, s, templates, _ptoks=ptoks)
-        r = serve(cands, store_path, priors=None, blast_radius="low")
+        r = serve(cands, store_path, priors=None, blast_radius="low",
+                  rank_by=ranker)
         actual_fam = category(s["text"])
         opts = r.get("options", [r.get("top", {})])[:3]
         hit3 = any(_optxt(o) and category(_optxt(o)) == actual_fam for o in opts)

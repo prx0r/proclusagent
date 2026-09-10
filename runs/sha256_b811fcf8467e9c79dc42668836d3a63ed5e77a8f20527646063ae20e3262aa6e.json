@@ -1,0 +1,12 @@
+{
+ "content": {
+  "out": {
+   "config": "untouched-by-design",
+   "mcp": "real-protocol"
+  },
+  "task": "WIRING-SPEC"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:b811fcf8467e9c79dc42668836d3a63ed5e77a8f20527646063ae20e3262aa6e",
+ "ts": 1789060120.6843288
+}

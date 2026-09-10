@@ -1,0 +1,13 @@
+{
+ "content": {
+  "out": {
+   "macros_live": 0,
+   "map": "done",
+   "miner": "green"
+  },
+  "task": "SEQUENCES"
+ },
+ "kind": "a-task",
+ "run_id": "sha256:638980d98d73ffd22504bbfb1ba665f1d5de503a53db0a349b569f78c23a0fc6",
+ "ts": 1789066348.979389
+}
